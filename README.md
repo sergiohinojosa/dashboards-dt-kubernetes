@@ -3,12 +3,15 @@
 
 
 ### Kubernetes Clusters Overview
-
 Dashboards for getting an overview of your Kubernetes Clusters, your Applications/Namespaces Health and it's utilization.
+
 
 Import via BizOps configurator
 https://dynatrace.github.io/BizOpsConfigurator/
- 
+
+⚠️ In order for the entities to be filtered properly, you'll need to add a tag `[Kubernetes]namespace` to your services/pods, so this could be filtered properly in the performance engineering dashboard. This will be later OOTB in the product. 
+
+
 ### Overview
 ![#](img/overview.png)
 
