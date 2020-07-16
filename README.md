@@ -20,6 +20,7 @@ Enjoy your new Kubernetes Dashboards
 
 > ⚠️ In order for the entities to be filtered properly, you'll need to add a tag `[Kubernetes]namespace` to your services/pods, so this could be filtered properly in the **Performance Engineering Dashboard**. This will be later OOTB in the product. 
 
+> ⚠️ Works with Dynatrace 196+
 
 ## 📊 Dashboards 
 
