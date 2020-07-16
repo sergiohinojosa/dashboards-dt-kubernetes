@@ -5,7 +5,8 @@
 Dashboards for getting an overview of your Kubernetes Clusters, your Applications/Namespaces Health and it's utilization.
 
 
-Import via BizOps configurator
+Import via BizOps configurator **[(Instructions here)](how-to-import-using-bizops.md)**
+
 https://dynatrace.github.io/BizOpsConfigurator/
 
 ⚠️ In order for the entities to be filtered properly, you'll need to add a tag `[Kubernetes]namespace` to your services/pods, so this could be filtered properly in the performance engineering dashboard. This will be later OOTB in the product. 
@@ -45,3 +46,4 @@ _____________________
 Are your endusers satisfied? how is the engagement, experience and user behaviour of your applications? Get the insights of all your applications and users in an instance.
 
 ![#](img/userexperience.png)
+
