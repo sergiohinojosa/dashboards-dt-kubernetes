@@ -1,0 +1,35 @@
+{
+    "dashboards": [
+
+        {
+            "id": "90b12398-d7fa-4cc8-819c-869c668bca3b",
+            "name": "🕸 Kubernetes Overview - Cluster Utilization",
+            "owner": "sergio.hinojosa@dynatrace.com"
+        },
+        {
+            "id": "2e232142-084e-4ffc-a0c4-e7af973f5b5c",
+            "name": "🕸 Kubernetes Overview - Performance Enginnering",
+            "owner": "sergio.hinojosa@dynatrace.com"
+        },
+        {
+            "id": "25f8f745-ead6-48ae-9d20-27bd2ad76cad",
+            "name": "🕸 Kubernetes Overview - Resource Quotas",
+            "owner": "sergio.hinojosa@dynatrace.com"
+        },
+        {
+            "id": "76a3fa00-e4c6-46a0-b265-f56c8a69c794",
+            "name": "🕸 Kubernetes Overview",
+            "owner": "sergio.hinojosa@dynatrace.com"
+        },
+        {
+            "id": "08eb2aae-b3ae-41d0-8a25-b68514883e09",
+            "name": "🕸 Kubernetes Overview - Container usage & health",
+            "owner": "sergio.hinojosa@dynatrace.com"
+        },
+        {
+            "id": "61c76d38-0d56-4060-8116-cf8037a6d400",
+            "name": "🕸 Kubernetes Overview - User Experience",
+            "owner": "sergio.hinojosa@dynatrace.com"
+        }
+    ]
+}
