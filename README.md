@@ -15,10 +15,15 @@ Dashboards for getting an overview of your Kubernetes Clusters, your Application
 4. Click *Done*
 
 
+Enjoy your new Kubernetes Dashboards 
+
+
 > ⚠️ In order for the entities to be filtered properly, you'll need to add a tag `[Kubernetes]namespace` to your services/pods, so this could be filtered properly in the **Performance Engineering Dashboard**. This will be later OOTB in the product. 
 
 
-### Overview
+## 📊 Dashboards 
+
+### Kubernetes Overview
 ![#](img/overview.png)
 
 
