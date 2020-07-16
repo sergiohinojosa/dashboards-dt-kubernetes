@@ -1,5 +1,4 @@
-# dashboards-dt-kubernetes
-
+# Dynatrace Dashboards for getting an overview of your Kubernetes Clusters
 
 
 ### Kubernetes Clusters Overview
