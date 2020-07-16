@@ -4,10 +4,16 @@
 ### Kubernetes Clusters Overview
 Dashboards for getting an overview of your Kubernetes Clusters, your Applications/Namespaces Health and it's utilization.
 
+## Import it in seconds via BizOps Configurator
 
-Import via BizOps configurator **[(Instructions here)](how-to-import-using-bizops.md)**
+1. **[(Click here)](https://dynatrace.github.io/BizOpsConfigurator/#deploy/persona/Ops/Platform%20Overview/K8s%20Overview)** to open the BizOps configurator preloaded with this Dashboards
 
-https://dynatrace.github.io/BizOpsConfigurator/
+2. Add your *tenantUrl* and *API-Token*
+
+3. The Persona, UseCase and Workflow is already selected for you. Click *next*
+
+4. Click *Done*
+
 
 > ⚠️ In order for the entities to be filtered properly, you'll need to add a tag `[Kubernetes]namespace` to your services/pods, so this could be filtered properly in the **Performance Engineering Dashboard**. This will be later OOTB in the product. 
 

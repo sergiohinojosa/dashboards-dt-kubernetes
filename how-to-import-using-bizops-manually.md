@@ -1,6 +1,9 @@
 ## How to import the Kubernetes Dashboards in your environment using the BizOps configurator
 
-Go to https://dynatrace.github.io/BizOpsConfigurator
+Click this link here
+
+https://dynatrace.github.io/BizOpsConfigurator/#deploy/persona/Ops/Platform%20Overview/K8s%20Overview
+
 
 
 1.	Click on the top right wheel (configuration)
