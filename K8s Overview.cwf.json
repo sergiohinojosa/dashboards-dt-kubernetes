@@ -1,0 +1,16 @@
+{
+    "html": "<div id=\"workflow\"><input type=\"hidden\" id=\"workflowConfigJSON\" value=\"{&quot;persona&quot;:[&quot;a001&quot;],&quot;usecase&quot;:&quot;a008&quot;,&quot;workflowName&quot;:&quot;K8s Overview&quot;,&quot;githubUser&quot;:&quot;sergiohinojosa&quot;,&quot;githubRepo&quot;:&quot;dashboards-dt-kubernetes&quot;,&quot;githubPath&quot;:&quot;&quot;,&quot;overviewDB&quot;:&quot;1-overview.json&quot;,&quot;readme&quot;:&quot;README.md&quot;,&quot;blogURL&quot;:&quot;&quot;,&quot;&quot;:&quot;Done&quot;,&quot;addBackButtons&quot;:true}\">\n        <div class=\"workflowPage activePage\"><div class=\"workflowSections\">\n        <div class=\"workflowSection\" tabindex=\"0\">\n            <div class=\"workflowSectionPopup hidden\">\n                <div><a href=\"#workflowBuilder\" class=\"workflowSectionAddInput\">+</a></div>\n                <div><a href=\"#workflowBuilder\" class=\"workflowSectionDelete\">❌</a></div>\n                <div><a href=\"#workflowBuilder\" class=\"workflowSectionUp\">🔼</a></div>\n                <div><a href=\"#workflowBuilder\" class=\"workflowSectionDown\">🔽</a></div>\n            </div>\n            <h3 contenteditable=\"true\">Deploy</h3>\n            \n        <div class=\"workflowInput\" tabindex=\"0\">\n                    <div class=\"workflowInputPopup hidden\">\n                        <div><a href=\"#workflowBuilder\" class=\"workflowInputDelete\">❌</a></div>\n                        <div><a href=\"#workflowBuilder\" class=\"workflowInputUp\">🔼</a></div>\n                        <div><a href=\"#workflowBuilder\" class=\"workflowInputDown\">🔽</a></div>\n                    </div>\n                    \n                    <div class=\"userInput\"><div class=\"workflowMarkdown\"><textarea style=\"margin: 10px 0px 0px; width: 273px; height: 28px;\">Click done to deploy...</textarea></div></div>\n                    \n                </div></div>\n    </div></div></div>",
+    "config": {
+        "persona": ["a001"],
+        "usecase": "a008",
+        "workflowName": "K8s Overview",
+        "githubUser": "sergiohinojosa",
+        "githubRepo": "dashboards-dt-kubernetes",
+        "githubPath": "",
+        "overviewDB": "1-overview.json",
+        "readme": "README.md",
+        "blogURL": "",
+        "": "Done",
+        "addBackButtons": true
+    }
+}

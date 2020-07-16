@@ -9,7 +9,7 @@ Import via BizOps configurator **[(Instructions here)](how-to-import-using-bizop
 
 https://dynatrace.github.io/BizOpsConfigurator/
 
-⚠️ In order for the entities to be filtered properly, you'll need to add a tag `[Kubernetes]namespace` to your services/pods, so this could be filtered properly in the performance engineering dashboard. This will be later OOTB in the product. 
+> ⚠️ In order for the entities to be filtered properly, you'll need to add a tag `[Kubernetes]namespace` to your services/pods, so this could be filtered properly in the **Performance Engineering Dashboard**. This will be later OOTB in the product. 
 
 
 ### Overview
