@@ -8,11 +8,11 @@ Dashboards for getting an overview of your Kubernetes Clusters, your Application
 
 1. **[(Click here)](https://dynatrace.github.io/BizOpsConfigurator/#deploy/persona/Ops/Platform%20Overview/K8s%20Overview)** to open the BizOps configurator preloaded with this Dashboards
 
-2. Add your *tenantUrl* and *API-Token*
+2. **Add** your **tenantUrl** and **API-Token**
 
-3. The Persona, UseCase and Workflow is already selected for you. Click *next*
+3. **Click next**. *The persona, usecase and workflow is already selected for you.* 
 
-4. Click *Done*
+4. **Click Done**
 
 
 Enjoy your new Kubernetes Dashboards 
