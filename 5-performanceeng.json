@@ -1115,7 +1115,7 @@
                 "timeframe": null,
                 "managementZone": null
             },
-            "markdown": " [Requests by App](#topglobalwebrequests;gtf=l_2_HOURS;gf=all;servicefilter=0%1E48%11%5BKubernetes%5Dapp) -  [Requests by Namespace](#topglobalwebrequests;gtf=l_2_HOURS;gf=all;servicefilter=0%1E48%11%5BKubernetes%5Dnamespace\u000B)  - [\uD83D\uDC22 TX > 10 Sec](#topglobalwebrequests;servicefilter=0%1E0%1110000000%144611686018427387) - [\uD83D\uDC0C >30 Sec](#topglobalwebrequests;servicefilter=0%1E0%1130000000%144611686018427387) - [Top SQL Statements](#topdbstatements;gtf=l_2_HOURS;gf=all) "
+            "markdown": " [Requests by App](#topglobalwebrequests;gtf=l_2_HOURS;gf=all;servicefilter=0%1E48%11%5BKubernetes%5Dapp) -  [Requests by Namespace](#topglobalwebrequests;gtf=l_2_HOURS;gf=all;servicefilter=0%1E48%11%5BKubernetes%5Dnamespace\u000B)  - [\uD83D\uDC22 TX > 10 Sec](#topglobalwebrequests;servicefilter=0%1E0%1110000000%144611686018427387%1048%11%5BKubernetes%5Dnamespace) - [\uD83D\uDC0C >30 Sec](#topglobalwebrequests;servicefilter=0%1E0%1130000000%144611686018427387%1048%11%5BKubernetes%5Dnamespace) - [Top SQL Statements](#topdbstatements;gtf=l_2_HOURS;gf=all) " "
         },
         {
             "name": "Markdown",
@@ -1343,7 +1343,7 @@
                 "timeframe": null,
                 "managementZone": null
             },
-            "markdown": "[❗Failed requests](#topglobalwebrequests;servicefilter=0%1E3%110) \n - [❗HTTP 4XX](#topglobalwebrequests;servicefilter=0%1E2%11400-499) - [❗HTTP 5XX](#topglobalwebrequests;servicefilter=0%1E2%11500-599) - [⚡️failed exceptions](#exceptionsoverview;servicefilter=0%1E3%110)"
+            "markdown": "[❗Failed requests](#topglobalwebrequests;servicefilter=0%1E3%110%1048%11%5BKubernetes%5Dnamespace) \n - [❗HTTP 4XX](#topglobalwebrequests;servicefilter=0%1E2%11400-499%1048%11%5BKubernetes%5Dnamespace) - [❗HTTP 5XX](#topglobalwebrequests;servicefilter=0%1E2%11500-599%1048%11%5BKubernetes%5Dnamespace) - [⚡️failed exceptions](#exceptionsoverview;servicefilter=0%1E3%110%1048%11%5BKubernetes%5Dnamespace)"
         },
         {
             "name": "Network status",
