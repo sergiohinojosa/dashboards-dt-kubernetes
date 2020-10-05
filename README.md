@@ -63,4 +63,14 @@ Are your endusers satisfied? how is the engagement, experience and user behaviou
 
 ## Automatically add the namespace tag to all your containers (pgi) and services 
 _____________________
+
+
+| Step  | Description  |
+| ------------- | ------------- |
+| 1. Add a tag (key) with the name **[Kubernetes]namespace**  | This is so the filter defined in the dashboard matches the tag. The name must be exact (yes with brakets)  |
+| 2. As tag value we use the namespace which is a dynamic value captured by Dynatrace from your container in the pod **{ProcessGroup:KubernetesNamespace}**  | The namespace will be dynamically captured and assigned.   |
+| 3. Rule applies to **Process groups** | We select the ProcessGroup (container clusters) as the Entity where we apply this tagging rule |
+| 4. Check "Apply to all services provided by the process groups" | We tell Dynatrace to all detected services (the purepaths of your containers) by any container to inherit this tagging, hence you can list and filter anywhere in Dynatrace transactions by namespace |
+
+
 ![#](img/k8namespace-tag-on-svcs.jpg)
