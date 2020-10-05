@@ -18,8 +18,8 @@ Dashboards for getting an overview of your Kubernetes Clusters, your Application
 Enjoy your new Kubernetes Dashboards 
 
 
-> ⚠️ In order for the entities to be filtered properly, you'll need to add a tag `[Kubernetes]namespace` to your services/pods, so this could be filtered properly in the **Performance Engineering Dashboard**. This will be later OOTB in the product. 
-
+> ⚠️ In order for the entities to be shown properly, you'll need to add a tag `[Kubernetes]namespace` to your services/pods. This is because the **Performance Engineering Dashboard** only shows transactions monitored in Kubernetes environments, the filter applies here. This will be later OOTB in the product.  See how to [Automatically add the namespace tag to all your containers (pgi) and services](#automatically-add-the-namespace-tag-to-all-your-containers-pgi-and-services)
+> 
 > ⚠️ Works with Dynatrace 196+
 
 ## 📊 Dashboards 
@@ -59,3 +59,8 @@ Are your endusers satisfied? how is the engagement, experience and user behaviou
 
 ![#](img/userexperience.png)
 
+
+
+## Automatically add the namespace tag to all your containers (pgi) and services 
+_____________________
+![#](img/k8namespace-tag-on-svcs.jpg)

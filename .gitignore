@@ -1,0 +1,10 @@
+# Temporary MD files
+*~*.md
+# No generated file
+**/gen/**
+# loc files
+**-loc**
+# No mounted file shares
+**sshfs**
+# No DS Store files
+.DS_Store
