@@ -3,9 +3,9 @@
         "configurationVersions": [3],
         "clusterVersion": "1.208.124.20210129-093941"
     },
-    "id": "bbbbbbbb-0001-0000-0000-000000000002",
+    "id": "bbbbbbbb-0001-0000-0000-000000000003",
     "dashboardMetadata": {
-        "name": "\uD83D\uDD78 Kubernetes Overview - Container usage & health",
+        "name": "\uD83D\uDD78 Kubernetes Overview - Resource Quotas",
         "shared": true,
         "owner": "jllormeau_ext",
         "sharingDetails": {
@@ -55,164 +55,132 @@
         },
         "chartVisible": true
     }, {
-        "name": "Custom chart",
+        "name": "",
         "tileType": "CUSTOM_CHARTING",
         "configured": true,
         "bounds": {
-            "top": 684,
-            "left": 950,
-            "width": 342,
-            "height": 228
+            "top": 760,
+            "left": 418,
+            "width": 532,
+            "height": 304
         },
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Memory requests [last 5 min]",
+            "customName": "CPU requests quota",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
-                "type": "TOP_LIST",
+                "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:cloud.kubernetes.pod.memoryRequests",
-                    "aggregation": "AVG",
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.cpuRequests",
+                    "aggregation": "SUM_DIMENSIONS",
                     "type": "LINE",
-                    "entityType": "MONITORED_ENTITY˟CLOUD_APPLICATION_INSTANCE",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
                     "dimensions": [{
                         "id": "0",
-                        "name": "dt.entity.cloud_application_instance",
+                        "name": "dt.entity.cloud_application_namespace",
                         "values": [],
                         "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": false,
+                    "aggregationRate": "TOTAL"
+                }, {
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.usedCpuRequests",
+                    "aggregation": "SUM_DIMENSIONS",
+                    "type": "BAR",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
                     }],
                     "sortAscending": false,
                     "sortColumn": true,
                     "aggregationRate": "TOTAL"
                 }],
-                "resultMetadata": {
-                    "CLOUD_APPLICATION_NAMESPACE-C61324AA70F57BCB¦CLOUD_APPLICATION_NAMESPACE»CLOUD_APPLICATION_NAMESPACE-C61324AA70F57BCB»truebuiltin:cloud.kubernetes.namespace.memoryRequests|AVG|TOTAL|LINE|CLOUD_APPLICATION_NAMESPACE": {
-                        "lastModified": 1587982372047,
-                        "customColor": "#7c38a1"
-                    },
-                    "CLOUD_APPLICATION_NAMESPACE-375040337FEFD0D6¦CLOUD_APPLICATION_NAMESPACE»CLOUD_APPLICATION_NAMESPACE-375040337FEFD0D6»truebuiltin:cloud.kubernetes.namespace.memoryRequests|AVG|TOTAL|LINE|CLOUD_APPLICATION_NAMESPACE": {
-                        "lastModified": 1587982380102,
-                        "customColor": "#c9a000"
-                    }
-                }
+                "resultMetadata": {},
+                "axisLimits": {
+                    "LEFT_MAX": 10000.0
+                },
+                "leftAxisCustomUnit": "MilliCores"
             },
             "filtersPerEntityType": {}
         }
     }, {
-        "name": "Custom chart",
+        "name": "",
         "tileType": "CUSTOM_CHARTING",
         "configured": true,
         "bounds": {
             "top": 418,
-            "left": 950,
-            "width": 342,
-            "height": 228
+            "left": 418,
+            "width": 532,
+            "height": 304
         },
         "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "CPU requests [last 5 min]",
+            "customName": "CPU limits quota",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
-                "type": "TOP_LIST",
+                "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:cloud.kubernetes.pod.cpuRequests",
-                    "aggregation": "AVG",
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.cpuLimits",
+                    "aggregation": "SUM_DIMENSIONS",
                     "type": "LINE",
-                    "entityType": "MONITORED_ENTITY˟CLOUD_APPLICATION_INSTANCE",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
                     "dimensions": [{
                         "id": "0",
-                        "name": "dt.entity.cloud_application_instance",
-                        "values": [],
-                        "entityDimension": true
-                    }],
-                    "sortAscending": false,
-                    "sortColumn": true,
-                    "aggregationRate": "TOTAL"
-                }],
-                "resultMetadata": {}
-            },
-            "filtersPerEntityType": {}
-        }
-    }, {
-        "name": "Custom chart",
-        "tileType": "CUSTOM_CHARTING",
-        "configured": true,
-        "bounds": {
-            "top": 684,
-            "left": 1292,
-            "width": 342,
-            "height": 228
-        },
-        "tileFilter": {},
-        "filterConfig": {
-            "type": "MIXED",
-            "customName": "Container CPU throttled time [last 5 min]",
-            "defaultName": "Custom chart",
-            "chartConfig": {
-                "legendShown": true,
-                "type": "TOP_LIST",
-                "series": [{
-                    "metric": "builtin:containers.cpu.throttledTime",
-                    "aggregation": "AVG",
-                    "type": "LINE",
-                    "entityType": "CONTAINER_GROUP_INSTANCE",
-                    "dimensions": [{
-                        "id": "0",
-                        "name": "dt.entity.container_group_instance",
-                        "values": [],
-                        "entityDimension": true
-                    }],
-                    "sortAscending": false,
-                    "sortColumn": true,
-                    "aggregationRate": "TOTAL"
-                }],
-                "resultMetadata": {}
-            },
-            "filtersPerEntityType": {}
-        }
-    }, {
-        "name": "Custom chart",
-        "tileType": "CUSTOM_CHARTING",
-        "configured": true,
-        "bounds": {
-            "top": 950,
-            "left": 1292,
-            "width": 342,
-            "height": 228
-        },
-        "tileFilter": {},
-        "filterConfig": {
-            "type": "MIXED",
-            "customName": "Container memory usage ",
-            "defaultName": "Custom chart",
-            "chartConfig": {
-                "legendShown": true,
-                "type": "TOP_LIST",
-                "series": [{
-                    "metric": "builtin:containers.memory.usagePercent",
-                    "aggregation": "AVG",
-                    "type": "LINE",
-                    "entityType": "CONTAINER_GROUP_INSTANCE",
-                    "dimensions": [{
-                        "id": "0",
-                        "name": "dt.entity.container_group_instance",
+                        "name": "dt.entity.cloud_application_namespace",
                         "values": [],
                         "entityDimension": true
                     }, {
                         "id": "1",
-                        "name": "Container",
-                        "values": ["server"],
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": false,
+                    "aggregationRate": "TOTAL"
+                }, {
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.usedCpuLimits",
+                    "aggregation": "SUM_DIMENSIONS",
+                    "type": "BAR",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
                         "entityDimension": false
                     }],
                     "sortAscending": false,
                     "sortColumn": true,
                     "aggregationRate": "TOTAL"
                 }],
-                "resultMetadata": {}
+                "resultMetadata": {},
+                "axisLimits": {
+                    "LEFT_MAX": 10000.0
+                },
+                "leftAxisCustomUnit": "MilliCores"
             },
             "filtersPerEntityType": {}
         }
@@ -221,42 +189,63 @@
         "tileType": "CUSTOM_CHARTING",
         "configured": true,
         "bounds": {
-            "top": 684,
-            "left": 608,
-            "width": 342,
-            "height": 228
+            "top": 418,
+            "left": 1102,
+            "width": 532,
+            "height": 304
         },
-        "tileFilter": {
-            "timeframe": "now-5m"
-        },
+        "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Pending pods [last 5 min]",
+            "customName": "Memory limits quota",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
-                "type": "TOP_LIST",
+                "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:cloud.kubernetes.workload.pods",
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.memoryLimits",
                     "aggregation": "SUM_DIMENSIONS",
                     "type": "LINE",
-                    "entityType": "CLOUD_APPLICATION",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
                     "dimensions": [{
                         "id": "0",
-                        "name": "dt.entity.cloud_application",
+                        "name": "dt.entity.cloud_application_namespace",
                         "values": [],
                         "entityDimension": true
                     }, {
                         "id": "1",
-                        "name": "Pod phase",
-                        "values": ["Pending"],
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": false,
+                    "aggregationRate": "TOTAL"
+                }, {
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.usedMemoryLimits",
+                    "aggregation": "SUM_DIMENSIONS",
+                    "type": "BAR",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
                         "entityDimension": false
                     }],
                     "sortAscending": false,
                     "sortColumn": true,
                     "aggregationRate": "TOTAL"
                 }],
-                "resultMetadata": {}
+                "resultMetadata": {},
+                "axisLimits": {
+                    "LEFT_MAX": 10.0
+                },
+                "leftAxisCustomUnit": "GigaByte"
             },
             "filtersPerEntityType": {}
         }
@@ -265,117 +254,66 @@
         "tileType": "CUSTOM_CHARTING",
         "configured": true,
         "bounds": {
-            "top": 950,
-            "left": 608,
-            "width": 342,
-            "height": 228
+            "top": 760,
+            "left": 1102,
+            "width": 532,
+            "height": 304
         },
-        "tileFilter": {
-            "timeframe": "Last 2 hours"
-        },
+        "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "Failed pods [last 5 min]",
+            "customName": "Memory requests quota",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
-                "type": "TOP_LIST",
+                "type": "TIMESERIES",
                 "series": [{
-                    "metric": "builtin:cloud.kubernetes.workload.pods",
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.memoryRequests",
                     "aggregation": "SUM_DIMENSIONS",
-                    "type": "AREA",
-                    "entityType": "CLOUD_APPLICATION",
+                    "type": "LINE",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
                     "dimensions": [{
                         "id": "0",
-                        "name": "dt.entity.cloud_application",
+                        "name": "dt.entity.cloud_application_namespace",
                         "values": [],
                         "entityDimension": true
                     }, {
                         "id": "1",
-                        "name": "Pod phase",
-                        "values": ["Failed"],
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": false,
+                    "aggregationRate": "TOTAL"
+                }, {
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.usedMemoryRequests",
+                    "aggregation": "SUM_DIMENSIONS",
+                    "type": "BAR",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
                         "entityDimension": false
                     }],
                     "sortAscending": false,
                     "sortColumn": true,
                     "aggregationRate": "TOTAL"
                 }],
-                "resultMetadata": {}
+                "resultMetadata": {},
+                "axisLimits": {
+                    "LEFT_MAX": 10.0
+                },
+                "leftAxisCustomUnit": "GigaByte"
             },
             "filtersPerEntityType": {}
         }
-    }, {
-        "name": "Markdown",
-        "tileType": "MARKDOWN",
-        "configured": true,
-        "bounds": {
-            "top": 646,
-            "left": 608,
-            "width": 342,
-            "height": 38
-        },
-        "tileFilter": {},
-        "markdown": "\uD83D\uDFE0Pods in pending phase"
-    }, {
-        "name": "Markdown",
-        "tileType": "MARKDOWN",
-        "configured": true,
-        "bounds": {
-            "top": 912,
-            "left": 608,
-            "width": 342,
-            "height": 38
-        },
-        "tileFilter": {},
-        "markdown": "\uD83D\uDD34Pods in failed state"
-    }, {
-        "name": "Markdown",
-        "tileType": "MARKDOWN",
-        "configured": true,
-        "bounds": {
-            "top": 380,
-            "left": 950,
-            "width": 342,
-            "height": 38
-        },
-        "tileFilter": {},
-        "markdown": "CPU resource requests per pod"
-    }, {
-        "name": "Markdown",
-        "tileType": "MARKDOWN",
-        "configured": true,
-        "bounds": {
-            "top": 646,
-            "left": 950,
-            "width": 342,
-            "height": 38
-        },
-        "tileFilter": {},
-        "markdown": "Memory resource requests per pod"
-    }, {
-        "name": "Markdown",
-        "tileType": "MARKDOWN",
-        "configured": true,
-        "bounds": {
-            "top": 646,
-            "left": 1292,
-            "width": 342,
-            "height": 38
-        },
-        "tileFilter": {},
-        "markdown": "CPU throttled containers in pods"
-    }, {
-        "name": "Markdown",
-        "tileType": "MARKDOWN",
-        "configured": true,
-        "bounds": {
-            "top": 912,
-            "left": 1292,
-            "width": 342,
-            "height": 38
-        },
-        "tileFilter": {},
-        "markdown": "Container memory usage over time"
     }, {
         "name": "Custom chart",
         "tileType": "CUSTOM_CHARTING",
@@ -954,170 +892,475 @@
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "###[Cluster utilization](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000001)"
-    }, {
-        "name": "Markdown",
-        "tileType": "MARKDOWN",
-        "configured": true,
-        "bounds": {
-            "top": 912,
-            "left": 950,
-            "width": 342,
-            "height": 38
-        },
-        "tileFilter": {},
-        "markdown": "Out of memory containers"
-    }, {
-        "name": "Custom chart",
-        "tileType": "CUSTOM_CHARTING",
-        "configured": true,
-        "bounds": {
-            "top": 950,
-            "left": 950,
-            "width": 342,
-            "height": 228
-        },
-        "tileFilter": {},
-        "filterConfig": {
-            "type": "MIXED",
-            "customName": "Out Of Memory Kills",
-            "defaultName": "Custom chart",
-            "chartConfig": {
-                "legendShown": true,
-                "type": "TOP_LIST",
-                "series": [{
-                    "metric": "builtin:containers.memory.outOfMemoryKills",
-                    "aggregation": "NONE",
-                    "type": "LINE",
-                    "entityType": "CONTAINER_GROUP_INSTANCE",
-                    "dimensions": [{
-                        "id": "0",
-                        "name": "dt.entity.container_group_instance",
-                        "values": [],
-                        "entityDimension": true
-                    }],
-                    "sortAscending": false,
-                    "sortColumn": true,
-                    "aggregationRate": "TOTAL"
-                }],
-                "resultMetadata": {
-                    "CLOUD_APPLICATION_NAMESPACE-C61324AA70F57BCB¦CLOUD_APPLICATION_NAMESPACE»CLOUD_APPLICATION_NAMESPACE-C61324AA70F57BCB»truebuiltin:cloud.kubernetes.namespace.memoryRequests|AVG|TOTAL|LINE|CLOUD_APPLICATION_NAMESPACE": {
-                        "lastModified": 1587982372047,
-                        "customColor": "#7c38a1"
-                    },
-                    "CLOUD_APPLICATION_NAMESPACE-375040337FEFD0D6¦CLOUD_APPLICATION_NAMESPACE»CLOUD_APPLICATION_NAMESPACE-375040337FEFD0D6»truebuiltin:cloud.kubernetes.namespace.memoryRequests|AVG|TOTAL|LINE|CLOUD_APPLICATION_NAMESPACE": {
-                        "lastModified": 1587982380102,
-                        "customColor": "#c9a000"
-                    }
-                }
-            },
-            "filtersPerEntityType": {}
-        }
-    }, {
-        "name": "Markdown",
-        "tileType": "MARKDOWN",
-        "configured": true,
-        "bounds": {
-            "top": 380,
-            "left": 1292,
-            "width": 342,
-            "height": 38
-        },
-        "tileFilter": {},
-        "markdown": "CPU Container usage"
-    }, {
-        "name": "Custom chart",
-        "tileType": "CUSTOM_CHARTING",
-        "configured": true,
-        "bounds": {
-            "top": 418,
-            "left": 1292,
-            "width": 342,
-            "height": 228
-        },
-        "tileFilter": {},
-        "filterConfig": {
-            "type": "MIXED",
-            "customName": "Container CPU usage % [last 5 min]",
-            "defaultName": "Custom chart",
-            "chartConfig": {
-                "legendShown": true,
-                "type": "TOP_LIST",
-                "series": [{
-                    "metric": "builtin:containers.cpu.usagePercent",
-                    "aggregation": "AVG",
-                    "type": "LINE",
-                    "entityType": "CONTAINER_GROUP_INSTANCE",
-                    "dimensions": [{
-                        "id": "0",
-                        "name": "dt.entity.container_group_instance",
-                        "values": [],
-                        "entityDimension": true
-                    }],
-                    "sortAscending": false,
-                    "sortColumn": true,
-                    "aggregationRate": "TOTAL"
-                }],
-                "resultMetadata": {}
-            },
-            "filtersPerEntityType": {}
-        }
-    }, {
-        "name": "Markdown",
-        "tileType": "MARKDOWN",
-        "configured": true,
-        "bounds": {
-            "top": 380,
-            "left": 608,
-            "width": 342,
-            "height": 38
-        },
-        "tileFilter": {},
-        "markdown": "\uD83D\uDFE2Pods running per cloud app"
+        "markdown": "###[Cluster utilization](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000001)\n"
     }, {
         "name": "",
         "tileType": "CUSTOM_CHARTING",
         "configured": true,
         "bounds": {
-            "top": 418,
-            "left": 608,
-            "width": 342,
-            "height": 228
+            "top": 760,
+            "left": 266,
+            "width": 152,
+            "height": 152
         },
-        "tileFilter": {
-            "timeframe": "now-5m"
-        },
+        "tileFilter": {},
         "filterConfig": {
             "type": "MIXED",
-            "customName": "running pods",
+            "customName": "CPU requests quota",
             "defaultName": "Custom chart",
             "chartConfig": {
                 "legendShown": true,
-                "type": "TOP_LIST",
+                "type": "SINGLE_VALUE",
                 "series": [{
-                    "metric": "builtin:cloud.kubernetes.workload.pods",
-                    "aggregation": "SUM_DIMENSIONS",
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.cpuRequests",
+                    "aggregation": "AVG",
                     "type": "AREA",
-                    "entityType": "CLOUD_APPLICATION",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
                     "dimensions": [{
                         "id": "0",
-                        "name": "dt.entity.cloud_application",
+                        "name": "dt.entity.cloud_application_namespace",
                         "values": [],
                         "entityDimension": true
                     }, {
                         "id": "1",
-                        "name": "Pod phase",
-                        "values": ["Running"],
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": false,
+                    "aggregationRate": "TOTAL"
+                }, {
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.usedCpuRequests",
+                    "aggregation": "AVG",
+                    "type": "AREA",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
                         "entityDimension": false
                     }],
                     "sortAscending": false,
                     "sortColumn": true,
                     "aggregationRate": "TOTAL"
                 }],
-                "resultMetadata": {}
+                "resultMetadata": {},
+                "leftAxisCustomUnit": "MilliCores"
             },
             "filtersPerEntityType": {}
         }
+    }, {
+        "name": "",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 418,
+            "left": 266,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "CPU limits quota",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "SINGLE_VALUE",
+                "series": [{
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.cpuLimits",
+                    "aggregation": "AVG",
+                    "type": "AREA",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": false,
+                    "aggregationRate": "TOTAL"
+                }, {
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.usedCpuLimits",
+                    "aggregation": "AVG",
+                    "type": "BAR",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": true,
+                    "aggregationRate": "TOTAL"
+                }],
+                "resultMetadata": {},
+                "leftAxisCustomUnit": "MilliCores"
+            },
+            "filtersPerEntityType": {}
+        }
+    }, {
+        "name": "",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 570,
+            "left": 266,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "CPU limits quota used",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "SINGLE_VALUE",
+                "series": [{
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.usedCpuLimits",
+                    "aggregation": "AVG",
+                    "type": "BAR",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": true,
+                    "aggregationRate": "TOTAL"
+                }],
+                "resultMetadata": {},
+                "leftAxisCustomUnit": "MilliCores"
+            },
+            "filtersPerEntityType": {}
+        }
+    }, {
+        "name": "",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 912,
+            "left": 266,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "CPU requests quota used",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "SINGLE_VALUE",
+                "series": [{
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.usedCpuRequests",
+                    "aggregation": "AVG",
+                    "type": "AREA",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": true,
+                    "aggregationRate": "TOTAL"
+                }],
+                "resultMetadata": {},
+                "leftAxisCustomUnit": "MilliCores"
+            },
+            "filtersPerEntityType": {}
+        }
+    }, {
+        "name": "",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 418,
+            "left": 950,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "Memory limits quota",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "SINGLE_VALUE",
+                "series": [{
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.memoryLimits",
+                    "aggregation": "AVG",
+                    "type": "AREA",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": false,
+                    "aggregationRate": "TOTAL"
+                }, {
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.usedMemoryLimits",
+                    "aggregation": "AVG",
+                    "type": "AREA",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": true,
+                    "aggregationRate": "TOTAL"
+                }],
+                "resultMetadata": {},
+                "leftAxisCustomUnit": "GigaByte"
+            },
+            "filtersPerEntityType": {}
+        }
+    }, {
+        "name": "",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 570,
+            "left": 950,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "Memory limits quota used",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "SINGLE_VALUE",
+                "series": [{
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.usedMemoryLimits",
+                    "aggregation": "AVG",
+                    "type": "AREA",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": true,
+                    "aggregationRate": "TOTAL"
+                }],
+                "resultMetadata": {},
+                "leftAxisCustomUnit": "GigaByte"
+            },
+            "filtersPerEntityType": {}
+        }
+    }, {
+        "name": "",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 760,
+            "left": 950,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "Memory requests quota",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "SINGLE_VALUE",
+                "series": [{
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.memoryRequests",
+                    "aggregation": "AVG",
+                    "type": "AREA",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": false,
+                    "aggregationRate": "TOTAL"
+                }, {
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.usedMemoryRequests",
+                    "aggregation": "AVG",
+                    "type": "AREA",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": true,
+                    "aggregationRate": "TOTAL"
+                }],
+                "resultMetadata": {},
+                "leftAxisCustomUnit": "GigaByte"
+            },
+            "filtersPerEntityType": {}
+        }
+    }, {
+        "name": "",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 760,
+            "left": 0,
+            "width": 266,
+            "height": 304
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "Memory requests quota used",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "TOP_LIST",
+                "series": [{
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.usedMemoryRequests",
+                    "aggregation": "AVG",
+                    "type": "AREA",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": true,
+                    "aggregationRate": "TOTAL"
+                }],
+                "resultMetadata": {},
+                "leftAxisCustomUnit": "GigaByte"
+            },
+            "filtersPerEntityType": {}
+        }
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 380,
+            "left": 950,
+            "width": 304,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "Memory limits quota & usage"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 380,
+            "left": 266,
+            "width": 304,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "CPU limits quota & usage"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 722,
+            "left": 266,
+            "width": 304,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "CPU requests"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 722,
+            "left": 950,
+            "width": 304,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "Memory requests"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
@@ -1135,111 +1378,13 @@
         "tileType": "MARKDOWN",
         "configured": true,
         "bounds": {
-            "top": 380,
-            "left": 0,
-            "width": 304,
-            "height": 38
-        },
-        "tileFilter": {},
-        "markdown": "\uD83D\uDFE2Running pods by namespace"
-    }, {
-        "name": "",
-        "tileType": "CUSTOM_CHARTING",
-        "configured": true,
-        "bounds": {
-            "top": 418,
-            "left": 0,
-            "width": 304,
-            "height": 760
-        },
-        "tileFilter": {},
-        "filterConfig": {
-            "type": "MIXED",
-            "customName": "running pods by namespace",
-            "defaultName": "Custom chart",
-            "chartConfig": {
-                "legendShown": true,
-                "type": "TOP_LIST",
-                "series": [{
-                    "metric": "builtin:cloud.kubernetes.namespace.runningPods",
-                    "aggregation": "SUM_DIMENSIONS",
-                    "type": "AREA",
-                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
-                    "dimensions": [{
-                        "id": "0",
-                        "name": "dt.entity.cloud_application_namespace",
-                        "values": [],
-                        "entityDimension": true
-                    }],
-                    "sortAscending": false,
-                    "sortColumn": true,
-                    "aggregationRate": "TOTAL"
-                }],
-                "resultMetadata": {}
-            },
-            "filtersPerEntityType": {}
-        }
-    }, {
-        "name": "",
-        "tileType": "CUSTOM_CHARTING",
-        "configured": true,
-        "bounds": {
-            "top": 418,
-            "left": 304,
-            "width": 304,
-            "height": 760
-        },
-        "tileFilter": {},
-        "filterConfig": {
-            "type": "MIXED",
-            "customName": "running pods by cloud app",
-            "defaultName": "Custom chart",
-            "chartConfig": {
-                "legendShown": true,
-                "type": "TOP_LIST",
-                "series": [{
-                    "metric": "builtin:cloud.kubernetes.workload.runningPods",
-                    "aggregation": "SUM_DIMENSIONS",
-                    "type": "LINE",
-                    "entityType": "CLOUD_APPLICATION",
-                    "dimensions": [{
-                        "id": "0",
-                        "name": "dt.entity.cloud_application",
-                        "values": [],
-                        "entityDimension": true
-                    }],
-                    "sortAscending": false,
-                    "sortColumn": true,
-                    "aggregationRate": "TOTAL"
-                }],
-                "resultMetadata": {}
-            },
-            "filtersPerEntityType": {}
-        }
-    }, {
-        "name": "Markdown",
-        "tileType": "MARKDOWN",
-        "configured": true,
-        "bounds": {
-            "top": 380,
-            "left": 304,
-            "width": 304,
-            "height": 38
-        },
-        "tileFilter": {},
-        "markdown": "\uD83D\uDFE2Running pods by cloud app"
-    }, {
-        "name": "Markdown",
-        "tileType": "MARKDOWN",
-        "configured": true,
-        "bounds": {
             "top": 342,
             "left": 304,
             "width": 304,
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "###[Resource Quotas](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000003)"
+        "markdown": "###[Resource Quotas](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000003)\n"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
@@ -1251,7 +1396,7 @@
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "###[Container usage & health](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000002)"
+        "markdown": "###[Container usage & health](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000002)\n"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
@@ -1263,7 +1408,7 @@
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "###[Performance Engineering](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000004)"
+        "markdown": "###[Performance Engineering](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000004)\n"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
@@ -1275,7 +1420,117 @@
             "height": 38
         },
         "tileFilter": {},
-        "markdown": "###[User Experience](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000005)"
+        "markdown": "###[User Experience](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000005)\n"
+    }, {
+        "name": "",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 418,
+            "left": 0,
+            "width": 266,
+            "height": 304
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "CPU requests quota used",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "TOP_LIST",
+                "series": [{
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.usedCpuRequests",
+                    "aggregation": "AVG",
+                    "type": "AREA",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": true,
+                    "aggregationRate": "TOTAL"
+                }],
+                "resultMetadata": {},
+                "leftAxisCustomUnit": "MilliCores"
+            },
+            "filtersPerEntityType": {}
+        }
+    }, {
+        "name": "",
+        "tileType": "CUSTOM_CHARTING",
+        "configured": true,
+        "bounds": {
+            "top": 912,
+            "left": 950,
+            "width": 152,
+            "height": 152
+        },
+        "tileFilter": {},
+        "filterConfig": {
+            "type": "MIXED",
+            "customName": "Memory requests quota used",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+                "legendShown": true,
+                "type": "SINGLE_VALUE",
+                "series": [{
+                    "metric": "builtin:cloud.kubernetes.namespace.quota.usedMemoryRequests",
+                    "aggregation": "AVG",
+                    "type": "AREA",
+                    "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                    "dimensions": [{
+                        "id": "0",
+                        "name": "dt.entity.cloud_application_namespace",
+                        "values": [],
+                        "entityDimension": true
+                    }, {
+                        "id": "1",
+                        "name": "Resource quota name",
+                        "values": [],
+                        "entityDimension": false
+                    }],
+                    "sortAscending": false,
+                    "sortColumn": true,
+                    "aggregationRate": "TOTAL"
+                }],
+                "resultMetadata": {},
+                "leftAxisCustomUnit": "GigaByte"
+            },
+            "filtersPerEntityType": {}
+        }
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 380,
+            "left": 0,
+            "width": 266,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "List of CPU request quotas usage"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 722,
+            "left": 0,
+            "width": 266,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "List of Memory request quotas usage"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
