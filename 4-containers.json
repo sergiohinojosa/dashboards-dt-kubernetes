@@ -1416,19 +1416,6 @@
             },
             "tileFilter": {},
             "markdown": "###[User Experience](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000005)"
-        },
-        {
-            "name": "Markdown",
-            "tileType": "MARKDOWN",
-            "configured": true,
-            "bounds": {
-                "top": 0,
-                "left": 1748,
-                "width": 38,
-                "height": 38
-            },
-            "tileFilter": {},
-            "markdown": "## [⇦](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000000)\n![BackButton]()"
         }
     ]
 }
