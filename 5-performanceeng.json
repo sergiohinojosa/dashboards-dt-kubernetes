@@ -3,21 +3,20 @@
         "configurationVersions": [
             3
         ],
-        "clusterVersion": "1.199.0.20200715-194449"
+        "clusterVersion": "1.208.124.20210129-093941"
     },
-    "id": "2e232142-084e-4ffc-a0c4-e7af973f5b5c",
+    "id": "bbbbbbbb-0001-0000-0000-000000000004",
     "dashboardMetadata": {
         "name": "\uD83D\uDD78 Kubernetes Overview - Performance Enginnering",
-        "shared": false,
-        "owner": "sergio.hinojosa@dynatrace.com",
+        "shared": true,
+        "owner": "jllormeau_ext",
         "sharingDetails": {
             "linkShared": true,
-            "published": false
+            "published": true
         },
-        "dashboardFilter": {
-            "timeframe": "",
-            "managementZone": null
-        }
+        "tags": [
+            "Configurator"
+        ]
     },
     "tiles": [
         {
@@ -30,10 +29,7 @@
                 "width": 304,
                 "height": 38
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "markdown": "###Cluster Overview   - [Cluster Insights](/ui/kubernetes/)"
         },
         {
@@ -46,10 +42,7 @@
                 "width": 152,
                 "height": 152
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "HOST",
                 "customName": "Full-Stack Kubernetes nodes",
@@ -80,10 +73,7 @@
                 "width": 152,
                 "height": 152
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "CPU available [last 5 min]",
@@ -95,7 +85,6 @@
                         {
                             "metric": "builtin:cloud.kubernetes.cluster.cpuAvailable",
                             "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "KUBERNETES_CLUSTER",
                             "dimensions": [],
@@ -119,10 +108,7 @@
                 "width": 152,
                 "height": 152
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "Memory available [last 5 min]",
@@ -134,7 +120,6 @@
                         {
                             "metric": "builtin:cloud.kubernetes.cluster.memoryAvailable",
                             "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "KUBERNETES_CLUSTER",
                             "dimensions": [],
@@ -158,10 +143,7 @@
                 "width": 152,
                 "height": 152
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "Cores",
@@ -173,7 +155,6 @@
                         {
                             "metric": "builtin:cloud.kubernetes.cluster.cores",
                             "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "KUBERNETES_CLUSTER",
                             "dimensions": [],
@@ -197,10 +178,7 @@
                 "width": 152,
                 "height": 152
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "Memory total",
@@ -212,7 +190,6 @@
                         {
                             "metric": "builtin:cloud.kubernetes.cluster.memory",
                             "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "KUBERNETES_CLUSTER",
                             "dimensions": [],
@@ -236,10 +213,7 @@
                 "width": 304,
                 "height": 152
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            }
+            "tileFilter": {}
         },
         {
             "name": "Markdown",
@@ -251,10 +225,7 @@
                 "width": 304,
                 "height": 38
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "markdown": "###Cluster Utilization"
         },
         {
@@ -267,10 +238,7 @@
                 "width": 266,
                 "height": 38
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "markdown": "###Pods phases "
         },
         {
@@ -283,10 +251,7 @@
                 "width": 266,
                 "height": 304
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "\uD83D\uDEA6Pods phases",
@@ -298,7 +263,6 @@
                         {
                             "metric": "builtin:cloud.kubernetes.workload.pods",
                             "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "CLOUD_APPLICATION",
                             "dimensions": [
@@ -342,10 +306,7 @@
                 "width": 152,
                 "height": 152
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "Nodes / Cluster",
@@ -357,7 +318,6 @@
                         {
                             "metric": "builtin:cloud.kubernetes.cluster.nodes",
                             "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "KUBERNETES_CLUSTER",
                             "dimensions": [
@@ -401,10 +361,7 @@
                 "width": 304,
                 "height": 152
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "Desired vs Running pods",
@@ -416,7 +373,6 @@
                         {
                             "metric": "builtin:cloud.kubernetes.namespace.desiredPods",
                             "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "CLOUD_APPLICATION_NAMESPACE",
                             "dimensions": [],
@@ -427,7 +383,6 @@
                         {
                             "metric": "builtin:cloud.kubernetes.namespace.runningPods",
                             "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "CLOUD_APPLICATION_NAMESPACE",
                             "dimensions": [],
@@ -473,10 +428,7 @@
                 "width": 228,
                 "height": 304
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "Workloads",
@@ -488,7 +440,6 @@
                         {
                             "metric": "builtin:cloud.kubernetes.namespace.workloads",
                             "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "CLOUD_APPLICATION_NAMESPACE",
                             "dimensions": [
@@ -532,10 +483,7 @@
                 "width": 228,
                 "height": 304
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "Pods by namespace",
@@ -547,7 +495,6 @@
                         {
                             "metric": "builtin:cloud.kubernetes.namespace.workloads",
                             "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "CLOUD_APPLICATION_NAMESPACE",
                             "dimensions": [
@@ -591,10 +538,7 @@
                 "width": 152,
                 "height": 152
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "desired pods",
@@ -606,7 +550,6 @@
                         {
                             "metric": "builtin:cloud.kubernetes.namespace.desiredPods",
                             "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "CLOUD_APPLICATION_NAMESPACE",
                             "dimensions": [],
@@ -617,7 +560,6 @@
                         {
                             "metric": "builtin:cloud.kubernetes.namespace.runningPods",
                             "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "CLOUD_APPLICATION_NAMESPACE",
                             "dimensions": [],
@@ -663,10 +605,7 @@
                 "width": 152,
                 "height": 152
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "running pods",
@@ -678,7 +617,6 @@
                         {
                             "metric": "builtin:cloud.kubernetes.namespace.runningPods",
                             "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "CLOUD_APPLICATION_NAMESPACE",
                             "dimensions": [],
@@ -724,10 +662,7 @@
                 "width": 456,
                 "height": 38
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "markdown": "###Cluster Workloads & Namespaces"
         },
         {
@@ -740,10 +675,7 @@
                 "width": 266,
                 "height": 38
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "markdown": "Running vs. desired pods"
         },
         {
@@ -756,11 +688,8 @@
                 "width": 304,
                 "height": 38
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
-            "markdown": "###[Container usage & health](#dashboard;id=08eb2aae-b3ae-41d0-8a25-b68514883e09;)\n"
+            "tileFilter": {},
+            "markdown": "###[Container usage & health](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000002)\n"
         },
         {
             "name": "Markdown",
@@ -772,11 +701,8 @@
                 "width": 304,
                 "height": 38
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
-            "markdown": "###[Cluster utilization](#dashboard;id=90b12398-d7fa-4cc8-819c-869c668bca3b;)\n"
+            "tileFilter": {},
+            "markdown": "###[Cluster utilization](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000001)\n"
         },
         {
             "name": "Markdown",
@@ -788,11 +714,8 @@
                 "width": 304,
                 "height": 38
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
-            "markdown": "###[Performance Engineering](#dashboard;id=2e232142-084e-4ffc-a0c4-e7af973f5b5c;)\n"
+            "tileFilter": {},
+            "markdown": "###[Performance Engineering](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000004)\n"
         },
         {
             "name": "Markdown",
@@ -804,11 +727,8 @@
                 "width": 152,
                 "height": 38
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
-            "markdown": "##[⬅︎](#dashboard;id=76a3fa00-e4c6-46a0-b265-f56c8a69c794)"
+            "tileFilter": {},
+            "markdown": "##[⬅︎](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000000)"
         },
         {
             "name": "Markdown",
@@ -820,11 +740,8 @@
                 "width": 304,
                 "height": 38
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
-            "markdown": "###[Resource Quotas](#dashboard;id=25f8f745-ead6-48ae-9d20-27bd2ad76cad;)\n"
+            "tileFilter": {},
+            "markdown": "###[Resource Quotas](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000003)\n"
         },
         {
             "name": "Markdown",
@@ -836,11 +753,8 @@
                 "width": 304,
                 "height": 38
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
-            "markdown": "###[User Experience](#dashboard;id=61c76d38-0d56-4060-8116-cf8037a6d400;)\n"
+            "tileFilter": {},
+            "markdown": "###[User Experience](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000005)\n"
         },
         {
             "name": "",
@@ -852,10 +766,7 @@
                 "width": 152,
                 "height": 152
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "SERVICE",
                 "customName": "Container Services",
@@ -886,10 +797,7 @@
                 "width": 266,
                 "height": 304
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "Slowest services based on 95th p ",
@@ -938,10 +846,7 @@
                 "width": 266,
                 "height": 304
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "Throughput of services ",
@@ -953,7 +858,6 @@
                         {
                             "metric": "builtin:service.response.time",
                             "aggregation": "COUNT",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "SERVICE",
                             "dimensions": [
@@ -990,11 +894,7 @@
                 "width": 152,
                 "height": 152
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
-            "filterConfig": null,
+            "tileFilter": {},
             "chartVisible": true
         },
         {
@@ -1007,10 +907,7 @@
                 "width": 266,
                 "height": 304
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "❗️Most failing services",
@@ -1022,7 +919,6 @@
                         {
                             "metric": "builtin:service.errors.total.rate",
                             "aggregation": "AVG",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "SERVICE",
                             "dimensions": [
@@ -1059,10 +955,7 @@
                 "width": 266,
                 "height": 304
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "Service outlier transactions (max)",
@@ -1074,7 +967,6 @@
                         {
                             "metric": "builtin:service.response.time",
                             "aggregation": "MAX",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "SERVICE",
                             "dimensions": [
@@ -1111,11 +1003,8 @@
                 "width": 684,
                 "height": 38
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
-            "markdown": " [Requests by App](#topglobalwebrequests;gtf=l_2_HOURS;gf=all;servicefilter=0%1E48%11%5BKubernetes%5Dapp) -  [Requests by Namespace](#topglobalwebrequests;gtf=l_2_HOURS;gf=all;servicefilter=0%1E48%11%5BKubernetes%5Dnamespace\u000B)  - [\uD83D\uDC22 TX > 10 Sec](#topglobalwebrequests;servicefilter=0%1E0%1110000000%144611686018427387) - [\uD83D\uDC0C >30 Sec](#topglobalwebrequests;servicefilter=0%1E0%1130000000%144611686018427387) - [Top SQL Statements](#topdbstatements;gtf=l_2_HOURS;gf=all) "
+            "tileFilter": {},
+            "markdown": " [Requests by App](/ui/diagnostictools/mda?mdaId=topweb&metric=REQUEST_COUNT&dimension=%7BRequest:Name%7D&mergeServices=false&aggregation=COUNT&percentile=80&chart=COLUMN&servicefilter=0%1E48%11%5BKubernetes%5Dapp) -  [Requests by Namespace](/ui/diagnostictools/mda?mdaId=topweb&metric=REQUEST_COUNT&dimension=%7BRequest:Name%7D&mergeServices=false&aggregation=COUNT&percentile=80&chart=COLUMN&servicefilter=0%1E48%11%5BKubernetes%5Dnamespace)  - [\uD83D\uDC22 TX > 10 Sec](ui/diagnostictools/mda?mdaId=topweb&metric=REQUEST_COUNT&dimension=%7BRequest:Name%7D&mergeServices=false&aggregation=COUNT&percentile=80&chart=COLUMN&servicefilter=0%1E26%112%1026%111%100%1110000000%144611686018427387) - [\uD83D\uDC0C >30 Sec](ui/diagnostictools/mda?mdaId=topweb&metric=REQUEST_COUNT&dimension=%7BRequest:Name%7D&mergeServices=false&aggregation=COUNT&percentile=80&chart=COLUMN&servicefilter=0%1E26%112%1026%111%100%1130000000%144611686018427387) - [Top SQL Statements](#topdbstatements;gtf=l_2_HOURS;gf=all) "
         },
         {
             "name": "Markdown",
@@ -1127,11 +1016,8 @@
                 "width": 228,
                 "height": 342
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
-            "markdown": "[\uD83D\uDD2C Diagnostic Tools](#diagnostictools;)\n\n- [\uD83D\uDD78Smartscape](#smartscape;)\n- [Top WebRequests](#topglobalwebrequests;)\n- [Exceptions](#exceptionsoverview;)\n- [Process Crashes](#processcrashesglobal;)\n- [CPU Analysis](#codelevel;)\n- [Memory Dumps](#memorydumpsglobal;)\n- [Log Analytics](#loganalytics;)\n- [Technologies](#newprocessessummary;)\n- [Database Statements](#topdbstatements;)"
+            "tileFilter": {},
+            "markdown": "[\uD83D\uDD2C Diagnostic Tools](/ui/diagnostictools)\n\n- [\uD83D\uDD78Smartscape](#smartscape)\n- [Top WebRequests](#topglobalwebrequests)\n- [Exceptions](#exceptionsoverview)\n- [Process Crashes](#processcrashesglobal)\n- [CPU Analysis](/ui/diagnostictools/profiling/cpu)\n- [Memory Dumps](#memorydumpsglobal)\n- [Log Analytics](#loganalytics)\n- [Technologies](#newprocessessummary)\n- [Database Statements](/ui/diagnostictools/mda?mdaId=topdb&metric=REQUEST_COUNT&dimension=%7BDatabase-Statement%7D&mergeServices=false&aggregation=COUNT&percentile=80&chart=COLUMN&servicefilter=0%1E26%110)"
         },
         {
             "name": "Custom chart",
@@ -1143,10 +1029,7 @@
                 "width": 684,
                 "height": 304
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "Request count vs 95th percentile",
@@ -1176,7 +1059,6 @@
                         {
                             "metric": "builtin:service.response.time",
                             "aggregation": "COUNT",
-                            "percentile": null,
                             "type": "BAR",
                             "entityType": "SERVICE",
                             "dimensions": [
@@ -1213,10 +1095,7 @@
                 "width": 684,
                 "height": 304
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "HTTP [4|5xx] and failed transactions",
@@ -1228,7 +1107,6 @@
                         {
                             "metric": "builtin:service.errors.fourxx.count",
                             "aggregation": "NONE",
-                            "percentile": null,
                             "type": "BAR",
                             "entityType": "SERVICE",
                             "dimensions": [],
@@ -1239,18 +1117,16 @@
                         {
                             "metric": "builtin:service.errors.fivexx.count",
                             "aggregation": "NONE",
-                            "percentile": null,
                             "type": "BAR",
                             "entityType": "SERVICE",
                             "dimensions": [],
                             "sortAscending": false,
-                            "sortColumn": true,
+                            "sortColumn": false,
                             "aggregationRate": "TOTAL"
                         },
                         {
                             "metric": "builtin:service.errors.total.count",
                             "aggregation": "NONE",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "SERVICE",
                             "dimensions": [
@@ -1287,10 +1163,7 @@
                 "width": 266,
                 "height": 304
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
+            "tileFilter": {},
             "filterConfig": {
                 "type": "MIXED",
                 "customName": "Database calls per Service",
@@ -1302,7 +1175,6 @@
                         {
                             "metric": "builtin:service.dbChildCallCount",
                             "aggregation": "NONE",
-                            "percentile": null,
                             "type": "LINE",
                             "entityType": "SERVICE",
                             "dimensions": [
@@ -1339,11 +1211,8 @@
                 "width": 684,
                 "height": 38
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            },
-            "markdown": "[❗Failed requests](#topglobalwebrequests;servicefilter=0%1E3%110) \n - [❗HTTP 4XX](#topglobalwebrequests;servicefilter=0%1E2%11400-499) - [❗HTTP 5XX](#topglobalwebrequests;servicefilter=0%1E2%11500-599) - [⚡️failed exceptions](#exceptionsoverview;servicefilter=0%1E3%110)"
+            "tileFilter": {},
+            "markdown": "[❗Failed requests](/ui/diagnostictools/mda?mdaId=topweb&metric=REQUEST_COUNT&dimension=%7BRequest:Name%7D&mergeServices=false&aggregation=COUNT&percentile=80&chart=COLUMN&servicefilter=0%1E26%112%1026%111%103%110) \n - [❗HTTP 4XX](/ui/diagnostictools/mda?mdaId=topweb&metric=REQUEST_COUNT&dimension=%7BRequest:Name%7D&mergeServices=false&aggregation=COUNT&percentile=80&chart=COLUMN&servicefilter=0%1E26%112%1026%111%102%11400-499) - [❗HTTP 5XX](/ui/diagnostictools/mda?mdaId=topweb&metric=REQUEST_COUNT&dimension=%7BRequest:Name%7D&mergeServices=false&aggregation=COUNT&percentile=80&chart=COLUMN&servicefilter=0%1E26%112%1026%111%102%11500-599) - [⚡️failed exceptions](#exceptionsoverview;servicefilter=0%1E3%110)"
         },
         {
             "name": "Network status",
@@ -1355,10 +1224,7 @@
                 "width": 304,
                 "height": 152
             },
-            "tileFilter": {
-                "timeframe": null,
-                "managementZone": null
-            }
+            "tileFilter": {}
         }
     ]
 }
