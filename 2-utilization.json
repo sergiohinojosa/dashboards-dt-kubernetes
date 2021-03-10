@@ -19,8 +19,7 @@
             "managementZone": null
         }
     },
-    "tiles": [
-        {
+    "tiles": [{
             "name": "Markdown",
             "tileType": "MARKDOWN",
             "configured": true,
@@ -91,26 +90,22 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "TOP_LIST",
-                    "series": [
-                        {
-                            "metric": "builtin:cloud.kubernetes.namespace.cpuRequests",
-                            "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
-                            "type": "BAR",
-                            "entityType": "CLOUD_APPLICATION_NAMESPACE",
-                            "dimensions": [
-                                {
-                                    "id": "0",
-                                    "name": "dt.entity.cloud_application_namespace",
-                                    "values": [],
-                                    "entityDimension": true
-                                }
-                            ],
-                            "sortAscending": false,
-                            "sortColumn": true,
-                            "aggregationRate": "TOTAL"
-                        }
-                    ],
+                    "series": [{
+                        "metric": "builtin:cloud.kubernetes.namespace.cpuRequests",
+                        "aggregation": "SUM_DIMENSIONS",
+                        "percentile": null,
+                        "type": "BAR",
+                        "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                        "dimensions": [{
+                            "id": "0",
+                            "name": "dt.entity.cloud_application_namespace",
+                            "values": [],
+                            "entityDimension": true
+                        }],
+                        "sortAscending": false,
+                        "sortColumn": true,
+                        "aggregationRate": "TOTAL"
+                    }],
                     "resultMetadata": {},
                     "leftAxisCustomUnit": "MilliCores"
                 },
@@ -138,19 +133,17 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "SINGLE_VALUE",
-                    "series": [
-                        {
-                            "metric": "builtin:cloud.kubernetes.cluster.cpuAvailable",
-                            "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
-                            "type": "LINE",
-                            "entityType": "KUBERNETES_CLUSTER",
-                            "dimensions": [],
-                            "sortAscending": false,
-                            "sortColumn": true,
-                            "aggregationRate": "TOTAL"
-                        }
-                    ],
+                    "series": [{
+                        "metric": "builtin:cloud.kubernetes.cluster.cpuAvailable",
+                        "aggregation": "SUM_DIMENSIONS",
+                        "percentile": null,
+                        "type": "LINE",
+                        "entityType": "KUBERNETES_CLUSTER",
+                        "dimensions": [],
+                        "sortAscending": false,
+                        "sortColumn": true,
+                        "aggregationRate": "TOTAL"
+                    }],
                     "resultMetadata": {}
                 },
                 "filtersPerEntityType": {}
@@ -177,19 +170,17 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "SINGLE_VALUE",
-                    "series": [
-                        {
-                            "metric": "builtin:cloud.kubernetes.cluster.memoryAvailable",
-                            "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
-                            "type": "LINE",
-                            "entityType": "KUBERNETES_CLUSTER",
-                            "dimensions": [],
-                            "sortAscending": false,
-                            "sortColumn": true,
-                            "aggregationRate": "TOTAL"
-                        }
-                    ],
+                    "series": [{
+                        "metric": "builtin:cloud.kubernetes.cluster.memoryAvailable",
+                        "aggregation": "SUM_DIMENSIONS",
+                        "percentile": null,
+                        "type": "LINE",
+                        "entityType": "KUBERNETES_CLUSTER",
+                        "dimensions": [],
+                        "sortAscending": false,
+                        "sortColumn": true,
+                        "aggregationRate": "TOTAL"
+                    }],
                     "resultMetadata": {}
                 },
                 "filtersPerEntityType": {}
@@ -216,19 +207,17 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "SINGLE_VALUE",
-                    "series": [
-                        {
-                            "metric": "builtin:cloud.kubernetes.cluster.cores",
-                            "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
-                            "type": "LINE",
-                            "entityType": "KUBERNETES_CLUSTER",
-                            "dimensions": [],
-                            "sortAscending": false,
-                            "sortColumn": true,
-                            "aggregationRate": "TOTAL"
-                        }
-                    ],
+                    "series": [{
+                        "metric": "builtin:cloud.kubernetes.cluster.cores",
+                        "aggregation": "SUM_DIMENSIONS",
+                        "percentile": null,
+                        "type": "LINE",
+                        "entityType": "KUBERNETES_CLUSTER",
+                        "dimensions": [],
+                        "sortAscending": false,
+                        "sortColumn": true,
+                        "aggregationRate": "TOTAL"
+                    }],
                     "resultMetadata": {}
                 },
                 "filtersPerEntityType": {}
@@ -255,19 +244,17 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "SINGLE_VALUE",
-                    "series": [
-                        {
-                            "metric": "builtin:cloud.kubernetes.cluster.memory",
-                            "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
-                            "type": "LINE",
-                            "entityType": "KUBERNETES_CLUSTER",
-                            "dimensions": [],
-                            "sortAscending": false,
-                            "sortColumn": true,
-                            "aggregationRate": "TOTAL"
-                        }
-                    ],
+                    "series": [{
+                        "metric": "builtin:cloud.kubernetes.cluster.memory",
+                        "aggregation": "SUM_DIMENSIONS",
+                        "percentile": null,
+                        "type": "LINE",
+                        "entityType": "KUBERNETES_CLUSTER",
+                        "dimensions": [],
+                        "sortAscending": false,
+                        "sortColumn": true,
+                        "aggregationRate": "TOTAL"
+                    }],
                     "resultMetadata": {}
                 },
                 "filtersPerEntityType": {}
@@ -341,26 +328,22 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "PIE",
-                    "series": [
-                        {
-                            "metric": "builtin:cloud.kubernetes.workload.pods",
-                            "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
-                            "type": "LINE",
-                            "entityType": "CLOUD_APPLICATION",
-                            "dimensions": [
-                                {
-                                    "id": "1",
-                                    "name": "Pod phase",
-                                    "values": [],
-                                    "entityDimension": false
-                                }
-                            ],
-                            "sortAscending": false,
-                            "sortColumn": true,
-                            "aggregationRate": "TOTAL"
-                        }
-                    ],
+                    "series": [{
+                        "metric": "builtin:cloud.kubernetes.workload.pods",
+                        "aggregation": "SUM_DIMENSIONS",
+                        "percentile": null,
+                        "type": "LINE",
+                        "entityType": "CLOUD_APPLICATION",
+                        "dimensions": [{
+                            "id": "1",
+                            "name": "Pod phase",
+                            "values": [],
+                            "entityDimension": false
+                        }],
+                        "sortAscending": false,
+                        "sortColumn": true,
+                        "aggregationRate": "TOTAL"
+                    }],
                     "resultMetadata": {
                         "null¦Pod phase»Pending»falsebuiltin:cloud.kubernetes.workload.pods|SUM_DIMENSIONS|TOTAL|LINE|CLOUD_APPLICATION": {
                             "lastModified": 1594115586538,
@@ -400,26 +383,22 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "PIE",
-                    "series": [
-                        {
-                            "metric": "builtin:cloud.kubernetes.cluster.nodes",
-                            "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
-                            "type": "LINE",
-                            "entityType": "KUBERNETES_CLUSTER",
-                            "dimensions": [
-                                {
-                                    "id": "0",
-                                    "name": "dt.entity.kubernetes_cluster",
-                                    "values": [],
-                                    "entityDimension": true
-                                }
-                            ],
-                            "sortAscending": false,
-                            "sortColumn": true,
-                            "aggregationRate": "TOTAL"
-                        }
-                    ],
+                    "series": [{
+                        "metric": "builtin:cloud.kubernetes.cluster.nodes",
+                        "aggregation": "SUM_DIMENSIONS",
+                        "percentile": null,
+                        "type": "LINE",
+                        "entityType": "KUBERNETES_CLUSTER",
+                        "dimensions": [{
+                            "id": "0",
+                            "name": "dt.entity.kubernetes_cluster",
+                            "values": [],
+                            "entityDimension": true
+                        }],
+                        "sortAscending": false,
+                        "sortColumn": true,
+                        "aggregationRate": "TOTAL"
+                    }],
                     "resultMetadata": {
                         "KUBERNETES_CLUSTER-EA9EB67E9CBAE0CD¦KUBERNETES_CLUSTER»KUBERNETES_CLUSTER-EA9EB67E9CBAE0CD»truebuiltin:cloud.kubernetes.cluster.nodes|SUM_DIMENSIONS|TOTAL|LINE|KUBERNETES_CLUSTER": {
                             "lastModified": 1594146638933,
@@ -459,8 +438,7 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "TIMESERIES",
-                    "series": [
-                        {
+                    "series": [{
                             "metric": "builtin:cloud.kubernetes.namespace.desiredPods",
                             "aggregation": "SUM_DIMENSIONS",
                             "percentile": null,
@@ -531,26 +509,22 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "TOP_LIST",
-                    "series": [
-                        {
-                            "metric": "builtin:cloud.kubernetes.namespace.workloads",
-                            "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
-                            "type": "LINE",
-                            "entityType": "CLOUD_APPLICATION_NAMESPACE",
-                            "dimensions": [
-                                {
-                                    "id": "1",
-                                    "name": "Deployment type",
-                                    "values": [],
-                                    "entityDimension": false
-                                }
-                            ],
-                            "sortAscending": false,
-                            "sortColumn": true,
-                            "aggregationRate": "TOTAL"
-                        }
-                    ],
+                    "series": [{
+                        "metric": "builtin:cloud.kubernetes.namespace.workloads",
+                        "aggregation": "SUM_DIMENSIONS",
+                        "percentile": null,
+                        "type": "LINE",
+                        "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                        "dimensions": [{
+                            "id": "1",
+                            "name": "Deployment type",
+                            "values": [],
+                            "entityDimension": false
+                        }],
+                        "sortAscending": false,
+                        "sortColumn": true,
+                        "aggregationRate": "TOTAL"
+                    }],
                     "resultMetadata": {
                         "null¦Pod phase»Pending»falsebuiltin:cloud.kubernetes.workload.pods|SUM_DIMENSIONS|TOTAL|LINE|CLOUD_APPLICATION": {
                             "lastModified": 1594115586538,
@@ -590,26 +564,22 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "TOP_LIST",
-                    "series": [
-                        {
-                            "metric": "builtin:cloud.kubernetes.namespace.workloads",
-                            "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
-                            "type": "LINE",
-                            "entityType": "CLOUD_APPLICATION_NAMESPACE",
-                            "dimensions": [
-                                {
-                                    "id": "0",
-                                    "name": "dt.entity.cloud_application_namespace",
-                                    "values": [],
-                                    "entityDimension": true
-                                }
-                            ],
-                            "sortAscending": false,
-                            "sortColumn": true,
-                            "aggregationRate": "TOTAL"
-                        }
-                    ],
+                    "series": [{
+                        "metric": "builtin:cloud.kubernetes.namespace.workloads",
+                        "aggregation": "SUM_DIMENSIONS",
+                        "percentile": null,
+                        "type": "LINE",
+                        "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                        "dimensions": [{
+                            "id": "0",
+                            "name": "dt.entity.cloud_application_namespace",
+                            "values": [],
+                            "entityDimension": true
+                        }],
+                        "sortAscending": false,
+                        "sortColumn": true,
+                        "aggregationRate": "TOTAL"
+                    }],
                     "resultMetadata": {
                         "null¦Pod phase»Pending»falsebuiltin:cloud.kubernetes.workload.pods|SUM_DIMENSIONS|TOTAL|LINE|CLOUD_APPLICATION": {
                             "lastModified": 1594115586538,
@@ -649,8 +619,7 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "SINGLE_VALUE",
-                    "series": [
-                        {
+                    "series": [{
                             "metric": "builtin:cloud.kubernetes.namespace.desiredPods",
                             "aggregation": "SUM_DIMENSIONS",
                             "percentile": null,
@@ -721,19 +690,17 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "SINGLE_VALUE",
-                    "series": [
-                        {
-                            "metric": "builtin:cloud.kubernetes.namespace.runningPods",
-                            "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
-                            "type": "LINE",
-                            "entityType": "CLOUD_APPLICATION_NAMESPACE",
-                            "dimensions": [],
-                            "sortAscending": false,
-                            "sortColumn": true,
-                            "aggregationRate": "TOTAL"
-                        }
-                    ],
+                    "series": [{
+                        "metric": "builtin:cloud.kubernetes.namespace.runningPods",
+                        "aggregation": "SUM_DIMENSIONS",
+                        "percentile": null,
+                        "type": "LINE",
+                        "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                        "dimensions": [],
+                        "sortAscending": false,
+                        "sortColumn": true,
+                        "aggregationRate": "TOTAL"
+                    }],
                     "resultMetadata": {
                         "nullbuiltin:cloud.kubernetes.namespace.runningPods|SUM_DIMENSIONS|TOTAL|LINE|CLOUD_APPLICATION_NAMESPACE": {
                             "lastModified": 1594147621067,
@@ -910,26 +877,22 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "TOP_LIST",
-                    "series": [
-                        {
-                            "metric": "builtin:cloud.kubernetes.namespace.cpuLimits",
-                            "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
-                            "type": "BAR",
-                            "entityType": "CLOUD_APPLICATION_NAMESPACE",
-                            "dimensions": [
-                                {
-                                    "id": "0",
-                                    "name": "dt.entity.cloud_application_namespace",
-                                    "values": [],
-                                    "entityDimension": true
-                                }
-                            ],
-                            "sortAscending": false,
-                            "sortColumn": true,
-                            "aggregationRate": "TOTAL"
-                        }
-                    ],
+                    "series": [{
+                        "metric": "builtin:cloud.kubernetes.namespace.cpuLimits",
+                        "aggregation": "SUM_DIMENSIONS",
+                        "percentile": null,
+                        "type": "BAR",
+                        "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                        "dimensions": [{
+                            "id": "0",
+                            "name": "dt.entity.cloud_application_namespace",
+                            "values": [],
+                            "entityDimension": true
+                        }],
+                        "sortAscending": false,
+                        "sortColumn": true,
+                        "aggregationRate": "TOTAL"
+                    }],
                     "resultMetadata": {},
                     "leftAxisCustomUnit": "MilliCores"
                 },
@@ -973,26 +936,22 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "TOP_LIST",
-                    "series": [
-                        {
-                            "metric": "builtin:cloud.kubernetes.namespace.memoryRequests",
-                            "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
-                            "type": "BAR",
-                            "entityType": "CLOUD_APPLICATION_NAMESPACE",
-                            "dimensions": [
-                                {
-                                    "id": "0",
-                                    "name": "dt.entity.cloud_application_namespace",
-                                    "values": [],
-                                    "entityDimension": true
-                                }
-                            ],
-                            "sortAscending": false,
-                            "sortColumn": true,
-                            "aggregationRate": "TOTAL"
-                        }
-                    ],
+                    "series": [{
+                        "metric": "builtin:cloud.kubernetes.namespace.memoryRequests",
+                        "aggregation": "SUM_DIMENSIONS",
+                        "percentile": null,
+                        "type": "BAR",
+                        "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                        "dimensions": [{
+                            "id": "0",
+                            "name": "dt.entity.cloud_application_namespace",
+                            "values": [],
+                            "entityDimension": true
+                        }],
+                        "sortAscending": false,
+                        "sortColumn": true,
+                        "aggregationRate": "TOTAL"
+                    }],
                     "resultMetadata": {},
                     "leftAxisCustomUnit": "MilliCores"
                 },
@@ -1036,26 +995,22 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "TOP_LIST",
-                    "series": [
-                        {
-                            "metric": "builtin:cloud.kubernetes.namespace.memoryLimits",
-                            "aggregation": "SUM_DIMENSIONS",
-                            "percentile": null,
-                            "type": "LINE",
-                            "entityType": "CLOUD_APPLICATION_NAMESPACE",
-                            "dimensions": [
-                                {
-                                    "id": "0",
-                                    "name": "dt.entity.cloud_application_namespace",
-                                    "values": [],
-                                    "entityDimension": true
-                                }
-                            ],
-                            "sortAscending": false,
-                            "sortColumn": true,
-                            "aggregationRate": "TOTAL"
-                        }
-                    ],
+                    "series": [{
+                        "metric": "builtin:cloud.kubernetes.namespace.memoryLimits",
+                        "aggregation": "SUM_DIMENSIONS",
+                        "percentile": null,
+                        "type": "LINE",
+                        "entityType": "CLOUD_APPLICATION_NAMESPACE",
+                        "dimensions": [{
+                            "id": "0",
+                            "name": "dt.entity.cloud_application_namespace",
+                            "values": [],
+                            "entityDimension": true
+                        }],
+                        "sortAscending": false,
+                        "sortColumn": true,
+                        "aggregationRate": "TOTAL"
+                    }],
                     "resultMetadata": {},
                     "leftAxisCustomUnit": "MilliCores"
                 },
@@ -1083,8 +1038,7 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "TIMESERIES",
-                    "series": [
-                        {
+                    "series": [{
                             "metric": "builtin:cloud.kubernetes.namespace.memoryLimits",
                             "aggregation": "SUM_DIMENSIONS",
                             "percentile": null,
@@ -1166,8 +1120,7 @@
                 "chartConfig": {
                     "legendShown": true,
                     "type": "TIMESERIES",
-                    "series": [
-                        {
+                    "series": [{
                             "metric": "builtin:cloud.kubernetes.namespace.cpuLimits",
                             "aggregation": "SUM_DIMENSIONS",
                             "percentile": null,
