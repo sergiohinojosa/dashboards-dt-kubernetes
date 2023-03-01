@@ -8,3 +8,6 @@
 **sshfs**
 # No DS Store files
 .DS_Store
+
+# NO VS Code Files
+**/.vscode/**
